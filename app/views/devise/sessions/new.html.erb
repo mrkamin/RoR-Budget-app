@@ -1,26 +1,46 @@
-<h2>Log in</h2>
+<body class="body">
+    <header class="login_header"> 
+        <nav class="login_nav list_style_none"> 
+                <li><a class="td_none" href="./index.html"><%=image_tag 'back.svg'%></a> </li>
+                <li><a class="td_none login_font1" href="./register.html">LOGIN</a> </li>
+                <li><a class="td_none login_font2" href="./land.html">Log In</a> </li>
+        </nav>
+    </header> 
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), data:{turbo: false}) do |f| %>
+    
+    <div class="field login_fieldset">
+      <%# <%= f.label :email %>
+      <%# <br /> %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email" %>
+    </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="field login_fieldset">
+      <%# <%= f.label :password %>  
+      <%# <br /> %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions land_footer_fieldset">
+      <%= f.submit "Log in", class:"login_input login_footer_fieldset" %>
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+  <p class="login_font3">
+  <%= link_to 'Forgot password ?', new_user_password_path, class:'td_none login_font3a' %></p>
 
-<%= render "devise/shared/links" %>
+  <p class="login_font3">
+  <%= link_to 'Sign up', new_user_registration_path, class:'td_none login_font3a' %></p>
+
+  <p class="login_font3">
+  <%= link_to 'Did not receive confirmation instructions?', new_user_confirmation_path, class:'td_none login_font3a' %></p>
+
+</body> 

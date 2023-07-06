@@ -1,9 +1,7 @@
 <body class="body">
     <header class="home_header">
         <nav class="home_nav list_style_none">
-            <li><%= link_to category_path(@category), class:"td_none" do %>
-                    <%= image_tag "back.svg" %>
-                    <% end %></li>
+            <li><a class="td_none" href=""><img src="./img/hamburger.png" alt=""></a></li>
             <li><a class="td_none home_font1" href="">TRANSACTIONS</a> </li>
             <li><%= button_to ('Log Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %></li>
         </nav>
@@ -20,23 +18,23 @@
         </section>
 
         <section class="home_section2">
-        <% @transactions.each do |transaction| %>
+        <% @payments.each do |payment| %>
      
    
             <article class="home_section2_article">
                 <div class="home_section2_article_box1">
                     <figure>
-                        <% transaction.categories.each do |key| %> 
+                        <% payment.categories.each do |key| %> 
                     <%=image_tag key.icon%>
                     <%end%>
                     </figure>
                     <div class="home_section2_article_box1_details">
-                        <p class="home_font2"><%= link_to transaction.name, transaction, class:"td_none home_font2" %></p>
-                        <p class="home_font2"><%=transaction.created_at.strftime('%d %B %Y')%></p>
+                        <p class="home_font2"><%= link_to payment.name, payment, class:"td_none home_font2" %></p>
+                        <p class="home_font2"><%=payment.created_at.strftime('%d %B %Y')%></p>
                     </div>
                 </div>
                 <div>
-                    <p class="home_font3">$<%= transaction.amount %></p>
+                    <p class="home_font3">$<%= payment.amount %></p>
                 </div>
             </article> 
         <% end %>
@@ -44,7 +42,7 @@
 
         <section class="home_section3">
             <button>
-             <%= link_to "New Transaction", new_category_transaction_path(@category), class:"td_none home_font4", data:{turbo: false} %> </button>
+             <%= link_to "New Transaction", new_category_payment_path(@category), class:"td_none home_font4", data:{turbo: false} %> </button>
         </section>
 
     </main>

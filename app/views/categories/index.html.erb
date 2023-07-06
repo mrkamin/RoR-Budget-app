@@ -1,7 +1,7 @@
 <body class="body">
     <header class="home_header">
         <nav class="home_nav list_style_none">
-           
+            <li><a class="td_none" href="./index.html"> <%=image_tag 'hamburger.png'%></a></li>
             <li><a class="td_none home_font1" href="./register.html">CATEGORIES</a> </li> 
             <li>
             <%= button_to ('Sign Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %>
@@ -9,9 +9,36 @@
             </li>
         </nav>
     </header>
-    <section class="home_section3">
-    <button> <%= link_to "New category", new_category_path, class:"td_none home_font4" %>  </button>
-</section>
-   
+
+     <main class="home_main">
+
+        <section class="home_section2">
+      <% @categories.each do |category| %> 
+
+
+            <article class="home_section2_article">
+                <div class="home_section2_article_box1">
+                    <figure>
+                    <%=image_tag category.icon%> 
+                    </figure>
+                    <div class="home_section2_article_box1_details">
+                        <p class="home_font2"><%= link_to category.name, category, class:"home_font2 td_none", data:{turbo: false} %>     </p>
+                        <p class="home_font2"><%=category.created_at.strftime('%d %B %Y')%></p>
+                    </div>
+                </div>
+                <div>
+                    <%= link_to category.total_category_amount, category, class:"home_font3 td_none", data:{turbo: false} %>
+                </div>
+            </article>
+
+      <% end %> 
+
+        </section>
+
+        <section class="home_section3">
+            <button> <%= link_to "New category", new_category_path, class:"td_none home_font4" %>  </button>
+        </section>
+
+    </main>
 
 </body>

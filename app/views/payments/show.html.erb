@@ -13,14 +13,14 @@
        <section class="details_section1">
         <article class="details_section1_article">
             <div class="details_section1_article_box1">
-                <% @transaction.categories.each do |key| %> 
+                <% @payment.categories.each do |key| %> 
                 <figure>
                     <%=image_tag key.icon%>
                 </figure> 
                 <%end%>
             </div>
             <div class="details_section1_article_box1_details">
-                    <p class="details_font2"><%= @transaction.name %></p> 
+                    <p class="details_font2"><%= @payment.name %></p> 
                 </div>
             </div> 
 
@@ -29,16 +29,16 @@
             </div> 
 
             <div class="details_box2">
-                <p class="details_font3 details_font4">Transaction N000<%= @transaction.id %>.</p>
+                <p class="details_font3 details_font4">Transaction N000<%= @payment.id %>.</p>
                 <p class="details_font5">
-                <%=@transaction.created_at.strftime('%d %B %Y')%>
+                <%=@payment.created_at.strftime('%d %B %Y')%>
                 </p>
             </div>
 
             <div class="details_box3"> 
-                <p class="details_font3 details_font4">TOTAL Transaction </p>              
+                <p class="details_font3 details_font4">TOTAL PAYMENT </p>              
                     
-                <p class="details_font3 details_font4"> $<%= @transaction.amount %></p>  
+                <p class="details_font3 details_font4"> $<%= @payment.amount %></p>  
             </div>
 
         </article> 

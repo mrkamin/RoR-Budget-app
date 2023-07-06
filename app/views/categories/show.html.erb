@@ -1,9 +1,8 @@
 <body class="body">
     <header class="details_header"> 
         <nav class="details_nav list_style_none"> 
-                <li> <%= link_to categories_path, class:"td_none" do %>
-                    <%= image_tag "back.svg" %>
-                    <% end %> </li>
+                <li><a class="td_none" href="">
+                <%=image_tag 'back.svg'%></a></li>
                 <li><a class="td_none details_font1" href="">CATEGORY</a> </li>
                 <li><%= button_to ('Log Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %></li>
         </nav>
@@ -30,15 +29,12 @@
                 <p class="details_font3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate laborum molestias quo omnis laudantium hic quod quaerat labore? Cum doloribus minus illum ad! Nisi quod fuga omnis consequuntur deleniti.</p> 
             </div> 
 
-            <% @category.payments.each do |paye| %> 
             <div class="details_box2">
-                <p class="details_font3 details_font4">Transaction N000<%= paye.id %>.</p>
-                <p class="details_font3 details_font4">Transaction N000<%= paye.id %>.</p>
+                <p class="details_font3 details_font4">Transaction N000<%= @category.id %>.</p>
                 <p class="details_font5">
-                <%=paye.created_at.strftime('%d %B %Y')%>
+                <%=@category.created_at.strftime('%d %B %Y')%>
                 </p>
             </div>
-              <% end %> 
 
             <div class="details_box3"> 
                 <p class="details_font3 details_font4">TOTAL PAYMENT </p>              

@@ -3,18 +3,18 @@
         <nav class="register_nav list_style_none"> 
                 <li><a class="td_none" href="">
                 <%=image_tag 'back.svg'%></a> </li>
-                <li><a class="td_none register_font1" href="">NEW TRANSACTIONS</a> </li>
+                <li><a class="td_none register_font1" href="">NEW PAYMENTS</a> </li>
                 <li><a class="td_none register_font2" href="">Next</a> </li>
         </nav>
     </header>
     
-  <%= form_with(model: [@category, @transaction], data:{turbo: false}) do |form| %>
-    <% if transaction.errors.any? %>
+  <%= form_with(model: [@category, @payment], data:{turbo: false}) do |form| %>
+    <% if payment.errors.any? %>
       <div style="color: red">
-        <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+        <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
 
         <ul>
-          <% transaction.errors.each do |error| %>
+          <% payment.errors.each do |error| %>
             <li><%= error.full_message %></li>
           <% end %>
         </ul>
