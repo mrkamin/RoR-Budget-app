@@ -65,4 +65,7 @@ group :development do
 end
 
 gem 'devise', '~> 4.9', '>= 4.9.2'
+gem 'cloudinary'
+gem 'cancancan'
+gem 'ffi', '~> 1.15.0'
 
