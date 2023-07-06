@@ -1,0 +1,47 @@
+<body class="body">
+    <header class="register_header"> 
+        <nav class="register_nav list_style_none"> 
+                <li><a class="td_none" href="">
+                <%=image_tag 'back.svg'%></a> </li>
+                <li><a class="td_none register_font1" href="">NEW TRANSACTIONS</a> </li>
+                <li><a class="td_none register_font2" href="">Next</a> </li>
+        </nav>
+    </header>
+    
+  <%= form_with(model: [@category, @transaction], data:{turbo: false}) do |form| %>
+    <% if transaction.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+        <ul>
+          <% transaction.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="register_fieldset"> 
+      <%= form.text_field :name, placeholder:"Name"  %>
+    </div>
+
+    <div class="register_fieldset"> 
+      <%= form.number_field :amount, placeholder:"Amount" %>
+    </div>
+
+     <div class=" list_style_none cate_flex"> 
+      <% current_user.categories.each do |categor| %>
+        <li class="list_flex">
+        <%= check_box_tag "categories[]", categor.id %>
+        <%= form.label categor.name %>
+        </li>
+      <% end %>
+    </div>  
+
+    <div class="actions register_fieldset">
+      <%= form.submit class:"login_input login_footer_fieldset" %>
+    </div>
+    
+  <% end %> 
+
+</body> 

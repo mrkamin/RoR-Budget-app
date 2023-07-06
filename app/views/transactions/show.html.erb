@@ -1,0 +1,61 @@
+<body class="body">
+    <header class="details_header"> 
+        <nav class="details_nav list_style_none"> 
+                <li><a class="td_none" href="">
+                <%=image_tag 'back.svg'%></a></li>
+                <li><a class="td_none details_font1" href="">DETAILS</a> </li>
+                <li><%= button_to ('Sign Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %></li>
+        </nav>
+    </header>
+
+    <main class="details_main"> 
+
+       <section class="details_section1">
+        <article class="details_section1_article">
+            <div class="details_section1_article_box1">
+                <% @transaction.categories.each do |key| %> 
+                <figure>
+                    <%=image_tag key.icon%>
+                </figure> 
+                <%end%>
+            </div>
+            <div class="details_section1_article_box1_details">
+                    <p class="details_font2"><%= @transaction.name %></p> 
+                </div>
+            </div> 
+
+            <div class="details_box1">
+                <p class="details_font3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate laborum molestias quo omnis laudantium hic quod quaerat labore? Cum doloribus minus illum ad! Nisi quod fuga omnis consequuntur deleniti.</p> 
+            </div> 
+
+            <div class="details_box2">
+                <p class="details_font3 details_font4">Transaction N000<%= @transaction.id %>.</p>
+                <p class="details_font5">
+                <%=@transaction.created_at.strftime('%d %B %Y')%>
+                </p>
+            </div>
+
+            <div class="details_box3"> 
+                <p class="details_font3 details_font4">TOTAL Transaction </p>              
+                    
+                <p class="details_font3 details_font4"> $<%= @transaction.amount %></p>  
+            </div>
+
+        </article> 
+       </section>
+        
+    </main> 
+
+        <p class="register_font4">
+        <%= link_to 'Back to users', users_path(@category), class:'td_none login_font3a' %></p>
+
+</body>
+
+
+
+
+
+
+
+
+
