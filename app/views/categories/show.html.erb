@@ -1,0 +1,59 @@
+<body class="body">
+    <header class="details_header"> 
+        <nav class="details_nav list_style_none"> 
+                <li> <%= link_to categories_path, class:"td_none" do %>
+                    <%= image_tag "back.svg" %>
+                    <% end %> </li>
+                <li><a class="td_none details_font1" href="">CATEGORY</a> </li>
+                <li><%= button_to ('Log Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %></li>
+        </nav>
+    </header>
+
+    <main class="details_main"> 
+
+       <section class="details_section1">
+
+        <article class="details_section1_article">
+            <div class="details_section1_article_box1">
+                <div class="details_section1_article_box1">  
+                    <figure>
+                        <%=image_tag @category.icon%>
+                    </figure>  
+                </div>
+
+                <div class="details_section1_article_box1_details">
+                    <p class="details_font2"><%= @category.name %></p> 
+                </div>
+            </div> 
+
+            <div class="details_box1">
+                <p class="details_font3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate laborum molestias quo omnis laudantium hic quod quaerat labore? Cum doloribus minus illum ad! Nisi quod fuga omnis consequuntur deleniti.</p> 
+            </div> 
+
+            <% @category.payments.each do |paye| %> 
+            <div class="details_box2">
+                <p class="details_font3 details_font4">Transaction N000<%= paye.id %>.</p>
+                <p class="details_font3 details_font4">Transaction N000<%= paye.id %>.</p>
+                <p class="details_font5">
+                <%=paye.created_at.strftime('%d %B %Y')%>
+                </p>
+            </div>
+              <% end %> 
+
+            <div class="details_box3"> 
+                <p class="details_font3 details_font4">TOTAL PAYMENT </p>              
+                    
+                <p class="details_font3 details_font4"> $<%= @category.total_category_amount %></p>  
+            </div>  
+ 
+        </article>
+        
+       </section>
+
+         <section class="home_section3">
+            <button> <%= link_to "New Transaction", new_category_payment_path(@category), class:"td_none home_font4", data:{turbo: false} %>  </button>
+        </section>
+        
+    </main> 
+
+</body>

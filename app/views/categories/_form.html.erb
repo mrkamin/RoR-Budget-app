@@ -1,0 +1,37 @@
+<body class="body">
+    <header class="register_header"> 
+        <nav class="register_nav list_style_none"> 
+                <li><a class="td_none" href="./index.html"><img src="./img/back.svg" alt=""></a> </li>
+                <li><a class="td_none register_font1" href="./register.html">CATEGORY</a> </li>
+                <li><a class="td_none register_font2" href="./land.html">Next</a> </li>
+        </nav>
+    </header>
+
+  <%= form_with(model: category, multipart: true, data:{turbo: false}) do |form| %>
+    <% if category.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+        <ul>
+          <% category.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="register_fieldset"> 
+      <%= form.text_field :name, placeholder:"Name" %>
+    </div>
+
+    <div class="register_fieldset icon_box">
+      <%= form.label :icon, style: "display: block" %>
+      <%= form.file_field :icon, class:"inputfile" %>
+    </div>
+
+    <div class="actions register_fieldset">
+      <%= form.submit class:"login_input login_footer_fieldset" %>
+    </div>
+  <% end %>
+
+</body>

@@ -1,0 +1,17 @@
+<body class="body">
+    <header class="home_header">
+        <nav class="home_nav list_style_none">
+           
+            <li><a class="td_none home_font1" href="./register.html">CATEGORIES</a> </li> 
+            <li>
+            <%= button_to ('Sign Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %>
+        
+            </li>
+        </nav>
+    </header>
+    <section class="home_section3">
+    <button> <%= link_to "New category", new_category_path, class:"td_none home_font4" %>  </button>
+</section>
+   
+
+</body>
