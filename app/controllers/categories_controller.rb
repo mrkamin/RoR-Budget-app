@@ -5,7 +5,9 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all.includes(:user).order(created_at: :desc).filter { |catego| catego.user_id == current_user.id }
+    @categories = Category.all.includes(:user).order(created_at: :desc).filter do |catego|
+      catego.user_id == current_user.id
+    end
     respond_to do |format|
       format.html
       format.json { render json: @categories, status: 200 }
@@ -27,7 +29,8 @@ class CategoriesController < ApplicationController
     if params[:category][:icon].present?
       uploaded_file = params[:category][:icon].tempfile
       cloudinary_response = Cloudinary::Uploader.upload(uploaded_file.path, folder: 'budgeat')
-      @category = current_user.categories.new(category_params.merge(user_id: current_user.id, icon: cloudinary_response['secure_url']))
+      @category = current_user.categories.new(category_params.merge(user_id: current_user.id,
+                                                                    icon: cloudinary_response['secure_url']))
     end
 
     if @category.save
