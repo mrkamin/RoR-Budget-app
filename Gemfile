@@ -71,8 +71,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-
-
 gem 'cancancan'
 gem 'cloudinary'
 gem 'devise', '~> 4.9', '>= 4.9.2'
