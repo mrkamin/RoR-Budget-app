@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Payments", type: :feature do
+RSpec.feature 'Payments', type: :feature do
   before(:all) do
     Capybara.reset_sessions!
   end

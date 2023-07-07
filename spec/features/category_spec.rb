@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Categories", type: :feature do
+RSpec.feature 'Categories', type: :feature do
   before(:all) do
     Capybara.reset_sessions!
   end
