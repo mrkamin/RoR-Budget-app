@@ -1,26 +1,27 @@
 .new-add-category-nav {
-    background: #0084ff;
-    width: 100%;
-  }
-  
-  .new-add-category-nav ul {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 16px;
-    align-items: center;
-  }
-  
-  .new-add-category-nav ul a {
-    text-decoration: none;
-    color: #fff;
-    font-size: large;
-  }
-  
-  .new-add-category-nav ul form {
-    margin-top: 0;
-    width: fit-content;
-  }
-  .image img {
-    width: 30px;
-  }
+  background: #0084ff;
+  width: 100%;
+}
+
+.new-add-category-nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  align-items: center;
+}
+
+.new-add-category-nav ul a {
+  text-decoration: none;
+  color: #fff;
+  font-size: large;
+}
+
+.new-add-category-nav ul form {
+  margin-top: 0;
+  width: fit-content;
+}
+
+.image img {
+  width: 30px;
+}

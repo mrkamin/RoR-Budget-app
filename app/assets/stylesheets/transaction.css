@@ -21,14 +21,17 @@
   margin-top: 0;
   width: fit-content;
 }
+
 .image img {
   width: 30px;
 }
+
 .trans-main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .sect-one {
   display: flex;
   flex-direction: column;
@@ -38,6 +41,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .trans-btn {
   width: fit-content;
   background-color: #0084ff;
@@ -49,16 +53,17 @@
 }
 
 .trans-btn:hover {
-background: #fff;
-border: 1px solid #0084ff;
-border-radius: 0.2rem;
+  background: #fff;
+  border: 1px solid #0084ff;
+  border-radius: 0.2rem;
 }
+
 .new-transection-btn {
- text-decoration: none;
- color: #fff;
- font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
 }
+
 .new-transection-btn:hover {
   color: #0084ff;
 }
-

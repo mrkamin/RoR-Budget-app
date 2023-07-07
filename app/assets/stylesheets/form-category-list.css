@@ -1,62 +1,62 @@
 
 .payment_nav {
-    background: #0084ff;
-    width: 100%;
-  }
-  
-  .payment_nav ul {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 16px;
-    align-items: center;
-  }
-  
-  .payment_nav ul a {
-    text-decoration: none;
-    color: #fff;
-    font-size: large;
-  }
-  
-  .payment_nav ul form {
-    margin-top: 0;
-    width: fit-content;
-  }
-  .image img {
-    width: 30px;
-  }
-
-  .payment-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50vh;
+  background: #0084ff;
+  width: 100%;
 }
 
+.payment_nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  align-items: center;
+}
+
+.payment_nav ul a {
+  text-decoration: none;
+  color: #fff;
+  font-size: large;
+}
 
 .payment-main form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.payment_nav ul form {
+  margin-top: 0;
+  width: fit-content;
+}
+
+.image img {
+  width: 30px;
+}
+
+.payment-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
 }
 
 .payment-main form input {
-    border: none;
-    border-radius: 0.2rem;
-    padding: 0.2rem;
-    background: whitesmoke;
-    color: #0084ff;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  background: whitesmoke;
+  color: #0084ff;
 }
 
 .category-list {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-    font-weight: bold;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  font-weight: bold;
 }
 
 .login_input {
-    background: #0084ff;
+  background: #0084ff;
 }
