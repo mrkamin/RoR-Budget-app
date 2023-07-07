@@ -1,13 +1,16 @@
-<body class="body">
-    <header class="register_header"> 
-        <nav class="register_nav list_style_none"> 
-                <li><a class="td_none" href="./index.html"><%=image_tag 'back.svg'%></a></li>
-                <li><a class="td_none register_font1" href="./register.html">REGISTER</a> </li>
-                <li><a class="td_none register_font2" href="./land.html">Next</a> </li>
+<%= stylesheet_link_tag "signup" %>
+<body>
+       <nav class="singup_nav"> 
+       <ul>
+                <a class="image" href="./index.html"><%=image_tag 'back.svg'%></a>
+                <a class="td_none register_font1" href="./register.html">REGISTER</a> 
+                <a class="td_none register_font2" href="./land.html">Next</a> 
+                </ul>
         </nav>
-    </header>
 
 
+        <main class="signup_main">
+        <section class="sect-one-signup">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data:{turbo: false}) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -38,7 +41,8 @@
 
   <p class="register_font4">
   <%= link_to 'Did not receive confirmation instructions?', new_user_confirmation_path, class:'td_none login_font3a' %></p>
-
+  </section>
+  </main>
 </body> 
 
 

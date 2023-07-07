@@ -1,21 +1,14 @@
-<body class="body"> 
-    
-    <main class="land_main">
-
-        <section class="land_main_section1">
-            <figure>
+<%= stylesheet_link_tag "splash" %>
+<body> 
+    <main class="main_splash">
+        <section class="sect-one-splash">
+            <div class="sect-one-container-splash">
                  <%=image_tag 'logo.webp'%>   
-            </figure>
+            <div class="sect-one-container-links">
+             <%= link_to 'LOG IN', new_user_session_path, class:'login' %> 
+             <%= link_to 'SIGN UP', new_user_registration_path, class:'signup' %>
+            </div>
+            </div>
         </section>
-
     </main>
-
-    <footer class="land_footer">
-        <ul class="land_footer_listbox list_style_none">
-        <li class="land_login">
-        <%= link_to 'LOG IN', new_user_session_path, class:'landfont1 td_none' %> </li>
-        <li class="land_signin"><%= link_to 'SIGN UP', new_user_registration_path, class:'landfont2 td_none' %></li> 
-        </ul>
-    </footer>
-
 </body>

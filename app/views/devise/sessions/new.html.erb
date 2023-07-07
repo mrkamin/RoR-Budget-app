@@ -1,13 +1,15 @@
-<body class="body">
-    <header class="login_header"> 
-        <nav class="login_nav list_style_none"> 
-                <li><a class="td_none" href="./index.html"><%=image_tag 'back.svg'%></a> </li>
-                <li><a class="td_none login_font1" href="./register.html">LOGIN</a> </li>
-                <li><a class="td_none login_font2" href="./land.html">Log In</a> </li>
-        </nav>
-    </header> 
+<%= stylesheet_link_tag "login" %>
+<body>
 
-
+  <nav class="login_nav"> 
+  <ul>
+    <a class="nav_link image" href="./index.html"><%=image_tag 'back.svg'%></a> 
+    <%= link_to 'LOG IN', new_user_session_path, class:'login' %> 
+    <%= link_to 'Sign up', new_user_registration_path, class:'td_none login_font3a' %>
+  </ul>
+    </nav>
+    <main class="login_main">
+<section class="sect-one-login">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), data:{turbo: false}) do |f| %>
     
     <div class="field login_fieldset">
@@ -34,13 +36,14 @@
     </div>
   <% end %>
 
-  <p class="login_font3">
+  <p>
   <%= link_to 'Forgot password ?', new_user_password_path, class:'td_none login_font3a' %></p>
 
-  <p class="login_font3">
+  <p>
   <%= link_to 'Sign up', new_user_registration_path, class:'td_none login_font3a' %></p>
 
-  <p class="login_font3">
+  <p>
   <%= link_to 'Did not receive confirmation instructions?', new_user_confirmation_path, class:'td_none login_font3a' %></p>
-
+</section>
+  </main>
 </body> 

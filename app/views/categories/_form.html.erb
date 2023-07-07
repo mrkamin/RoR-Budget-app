@@ -1,12 +1,16 @@
+<%= stylesheet_link_tag "add-category" %>
 <body class="body">
-    <header class="register_header"> 
-        <nav class="register_nav list_style_none"> 
-                <li><a class="td_none" href="./index.html"><img src="./img/back.svg" alt=""></a> </li>
-                <li><a class="td_none register_font1" href="./register.html">CATEGORY</a> </li>
-                <li><a class="td_none register_font2" href="./land.html">Next</a> </li>
+     
+        <nav class="new-add-category-nav"> 
+        <ul>
+                <a class="image" href="./index.html"><img src="./img/back.svg" alt=""></a> 
+                <a class="td_none register_font1" href="./register.html">CATEGORY</a>
+                <a class="td_none register_font2" href="./land.html">Next</a> 
+                </ul>
         </nav>
-    </header>
-
+   
+        <main class="add-category-main">
+        <section class="sect-one">
   <%= form_with(model: category, multipart: true, data:{turbo: false}) do |form| %>
     <% if category.errors.any? %>
       <div style="color: red">
@@ -33,5 +37,6 @@
       <%= form.submit class:"login_input login_footer_fieldset" %>
     </div>
   <% end %>
-
+</section>
+</main>
 </body>

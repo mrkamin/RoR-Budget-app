@@ -1,13 +1,18 @@
-<body class="body">
-    <header class="register_header"> 
-        <nav class="register_nav list_style_none"> 
-                <li><a class="td_none" href="">
-                <%=image_tag 'back.svg'%></a> </li>
-                <li><a class="td_none register_font1" href="">NEW PAYMENTS</a> </li>
-                <li><a class="td_none register_font2" href="">Next</a> </li>
+<% stylesheet_link_tag "form-category-list" %>
+<body >
+  
+        <nav class="payment_nav"> 
+        <ul>
+               <a class="image" href="">
+                <%=image_tag 'back.svg'%></a> 
+                <a class="td_none register_font1" href="">NEW PAYMENTS</a> 
+                <a class="td_none register_font2" href="">Next</a> 
+                </ul>
         </nav>
-    </header>
-    
+        <main class="payment-main">
+
+        <section class="sect-one-payment">
+  
   <%= form_with(model: [@category, @payment], data:{turbo: false}) do |form| %>
     <% if payment.errors.any? %>
       <div style="color: red">
@@ -29,7 +34,7 @@
       <%= form.number_field :amount, placeholder:"Amount" %>
     </div>
 
-     <div class=" list_style_none cate_flex"> 
+     <div class="category-list"> 
       <% current_user.categories.each do |categor| %>
         <li class="list_flex">
         <%= check_box_tag "categories[]", categor.id %>

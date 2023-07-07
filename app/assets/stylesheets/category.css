@@ -1,0 +1,119 @@
+
+.nav_category {
+  background: #0084ff;
+  width: 100%;
+}
+
+.nav_category ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  align-items: center;
+}
+
+.nav_category ul a {
+  text-decoration: none;
+  color: #fff;
+  font-size: large;
+}
+
+.nav_category ul form {
+  margin-top: 0;
+}
+.image img {
+  width: 30px;
+}
+
+  form {
+    width: fit-content;
+  }
+
+  .sign_out_btn {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+    font-size: large;
+    color: #fff;
+    background: #0084ff;
+    transition: all 0.3s ease;
+  }
+
+  .sign_out_btn:hover {
+      background-color: #fff;
+      color: #0084ff;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .sect-one-category {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+  }
+   img {
+    width: 50px;
+  }
+
+  .sect-one-conatainer {
+    display: flex;
+    border: 1px solid #0084ff;
+    border-radius: 0.2rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .sect-one-conatainer:nth-child(even) {
+    background: whitesmoke;
+  }
+  
+  .sect-one-container-items {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 0.2rem;
+   
+  }
+
+  .sect-one-cont-items-item-two {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+  }
+
+  .sect-one-container-item-three {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  .home_section3 {
+    display: flex;
+    justify-content: center;
+  }
+  .home_section3 button {
+    border: none;
+    border-radius: 0.3rem;
+    background: #0084ff;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  .home_section3 button:hover {
+    background: #fff;
+    border: 1px solid #0084ff;
+  }
+
+  .home_section3 button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .home_section3 button a:hover {
+    color: #0084ff;
+  }

@@ -1,35 +1,34 @@
-<body class="body">
-    <header class="home_header">
-        <nav class="home_nav list_style_none">
-            <li><a class="td_none" href="./index.html"> <%=image_tag 'hamburger.png'%></a></li>
-            <li><a class="td_none home_font1" href="./register.html">CATEGORIES</a> </li> 
-            <li>
-            <%= button_to ('Sign Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %>
-        
-            </li>
-        </nav>
-    </header>
+<%= stylesheet_link_tag "category" %>
+<body>
+    <nav class="nav_category" >
+    <ul>
+            <a class="image" href="./index.html"> <%=image_tag 'hamburger.png'%></a>
+            <a class="td_none home_font1" href="./register.html">CATEGORIES</a> 
+            <%= button_to ('Sign Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn" %>
+    </ul>
+            </nav>
+   
 
-     <main class="home_main">
+     <main>
 
-        <section class="home_section2">
+        <section class="sect-one-category">
       <% @categories.each do |category| %> 
 
 
-            <article class="home_section2_article">
-                <div class="home_section2_article_box1">
-                    <figure>
+            <div class="sect-one-conatainer">
+                <div class="sect-one-container-items">
+                    
                     <%=image_tag category.icon%> 
-                    </figure>
-                    <div class="home_section2_article_box1_details">
-                        <p class="home_font2"><%= link_to category.name, category, class:"home_font2 td_none", data:{turbo: false} %>     </p>
-                        <p class="home_font2"><%=category.created_at.strftime('%d %B %Y')%></p>
+                    
+                    <div class="sect-one-cont-items-item-two">
+                        <p><%= link_to category.name, category, class:"category-name", data:{turbo: false} %></p>
+                        <p><%=category.created_at.strftime('%d %B %Y')%></p>
                     </div>
                 </div>
-                <div>
-                    <%= link_to category.total_category_amount, category, class:"home_font3 td_none", data:{turbo: false} %>
+                <div class="sect-one-container-item-three">
+                    <%= link_to category.total_category_amount, category, class:"total-amount", data:{turbo: false} %>
                 </div>
-            </article>
+            </div>
 
       <% end %> 
 

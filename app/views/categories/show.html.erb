@@ -1,52 +1,47 @@
+<% stylesheet_link_tag "category_show" %>
 <body class="body">
-    <header class="details_header"> 
-        <nav class="details_nav list_style_none"> 
-                <li><a class="td_none" href="">
-                <%=image_tag 'back.svg'%></a></li>
-                <li><a class="td_none details_font1" href="">CATEGORY</a> </li>
-                <li><%= button_to ('Log Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %></li>
+    
+<nav class="nav_category-show" >
+<ul>
+        <a class="image" href="./index.html"> <%=image_tag 'hamburger.png'%></a>
+        <a class="td_none home_font1" href="./register.html">CATEGORIES</a> 
+        <%= button_to ('Sign Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn" %>
+</ul>
         </nav>
-    </header>
+    
 
-    <main class="details_main"> 
+    <main> 
 
-       <section class="details_section1">
+       <section class="sect-one">
 
-        <article class="details_section1_article">
-            <div class="details_section1_article_box1">
-                <div class="details_section1_article_box1">  
-                    <figure>
-                        <%=image_tag @category.icon%>
-                    </figure>  
-                </div>
-
-                <div class="details_section1_article_box1_details">
-                    <p class="details_font2"><%= @category.name %></p> 
-                </div>
+        <div class="sect-one-cat-show-container">
+            <div class="sect-one-container-item-one">
+                <%=image_tag @category.icon%>
+                <p><%= @category.name %></p> 
             </div> 
 
-            <div class="details_box1">
-                <p class="details_font3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate laborum molestias quo omnis laudantium hic quod quaerat labore? Cum doloribus minus illum ad! Nisi quod fuga omnis consequuntur deleniti.</p> 
+            <div class="category-details">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate laborum molestias quo omnis laudantium hic quod quaerat labore? Cum doloribus minus illum ad! Nisi quod fuga omnis consequuntur deleniti.</p> 
             </div> 
 
-            <div class="details_box2">
+            <div class="transaction-detals">
                 <p class="details_font3 details_font4">Transaction N000<%= @category.id %>.</p>
                 <p class="details_font5">
                 <%=@category.created_at.strftime('%d %B %Y')%>
                 </p>
             </div>
 
-            <div class="details_box3"> 
-                <p class="details_font3 details_font4">TOTAL PAYMENT </p>              
+            <div > 
+                <p >TOTAL PAYMENT </p>              
                     
-                <p class="details_font3 details_font4"> $<%= @category.total_category_amount %></p>  
+                <p > $<%= @category.total_category_amount %></p>  
             </div>  
  
-        </article>
+        </div>
         
        </section>
 
-         <section class="home_section3">
+         <section class="sect-two-category-show">
             <button> <%= link_to "New Transaction", new_category_payment_path(@category), class:"td_none home_font4", data:{turbo: false} %>  </button>
         </section>
         
