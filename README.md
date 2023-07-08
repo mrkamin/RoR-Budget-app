@@ -8,11 +8,15 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Install](#install)
   - [Usage](#usage)
- - [👥 Authors](#authors)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -48,6 +52,16 @@
 - "Add a new category" page
 - "Add a new transaction" page
 - Testing requirements
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link]()
+
+## Project Presentation <a name="project-presentation"></a>
+
+- [Project Presentation video link](https://www.loom.com/share/c857f62ec5be457cbb32472cea3520c2)  
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -135,7 +149,7 @@ If you like this project, Please give it a ⭐️⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Thanks [@microverse](https://www.microverse.org/)
+Thanks [@Gregoire Vella on Behance ](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
