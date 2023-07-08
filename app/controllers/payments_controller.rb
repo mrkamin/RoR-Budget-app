@@ -61,7 +61,6 @@ class PaymentsController < ApplicationController
 
   private
 
-
   def set_payment
     @payment = Payment.find(params[:id])
   end
