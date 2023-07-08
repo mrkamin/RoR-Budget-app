@@ -1,44 +1,47 @@
-<body class="body">
-    <header class="details_header"> 
-        <nav class="details_nav list_style_none"> 
-                <li><a class="td_none" href="">
-                <%=image_tag 'back.svg'%></a></li>
-                <li><a class="td_none details_font1" href="">DETAILS</a> </li>
-                <li><%= button_to ('Sign Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %></li>
-        </nav>
-    </header>
+<%= stylesheet_link_tag "detail" %>
+<body>
+    
+        <nav class="detail-nav"> 
+        <ul>
+                <a class="image" href="">
+                <%=image_tag 'back.svg'%></a>
+                <a class="td_none details_font1" href="">DETAILS</a> 
+                <%= button_to ('Log Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %>
+        </ul>
+                </nav>
+   
 
     <main class="details_main"> 
 
-       <section class="details_section1">
-        <article class="details_section1_article">
-            <div class="details_section1_article_box1">
+       <section class="sect-one-detail">
+        <article class="sect-one-detail-cont">
+            <div class="sect-one-detail-cont-item">
                 <% @payment.categories.each do |key| %> 
                 <figure>
                     <%=image_tag key.icon%>
                 </figure> 
                 <%end%>
             </div>
-            <div class="details_section1_article_box1_details">
-                    <p class="details_font2"><%= @payment.name %></p> 
+            <div class="sect-one-detail-name">
+                    <p ><%= @payment.name %></p> 
                 </div>
             </div> 
 
-            <div class="details_box1">
-                <p class="details_font3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate laborum molestias quo omnis laudantium hic quod quaerat labore? Cum doloribus minus illum ad! Nisi quod fuga omnis consequuntur deleniti.</p> 
+            <div class="sect-one-detail-desc">
+                <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate laborum molestias quo omnis laudantium hic quod quaerat labore? Cum doloribus minus illum ad! Nisi quod fuga omnis consequuntur deleniti.</p> 
             </div> 
 
-            <div class="details_box2">
-                <p class="details_font3 details_font4">Transaction N000<%= @payment.id %>.</p>
-                <p class="details_font5">
+            <div class="sect-one-detail-date">
+                <p >Transaction N000<%= @payment.id %>.</p>
+                <p >
                 <%=@payment.created_at.strftime('%d %B %Y')%>
                 </p>
             </div>
 
-            <div class="details_box3"> 
-                <p class="details_font3 details_font4">TOTAL PAYMENT </p>              
+            <div class="sect-one-detail-amount"> 
+                <p >TOTAL PAYMENT </p>              
                     
-                <p class="details_font3 details_font4"> $<%= @payment.amount %></p>  
+                <p > $<%= @payment.amount %></p>  
             </div>
 
         </article> 

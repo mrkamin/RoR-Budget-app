@@ -1,6 +1,6 @@
 
 .payment_nav {
-  background: #0084ff;
+  background: #3573ba;
   width: 100%;
 }
 
@@ -47,7 +47,7 @@
   border-radius: 0.2rem;
   padding: 0.2rem;
   background: whitesmoke;
-  color: #0084ff;
+  color: #3573ba;
 }
 
 .category-list {
@@ -58,5 +58,5 @@
 }
 
 .login_input {
-  background: #0084ff;
+  background: #3573ba;
 }

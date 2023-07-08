@@ -1,9 +1,9 @@
-.transaction-nav {
+.detail-nav {
   background: #3573ba;
   width: 100%;
 }
 
-.transaction-nav ul {
+.detail-nav ul {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -12,13 +12,13 @@
   list-style: none;
 }
 
-.transaction-nav ul a {
+.detail-nav ul a {
   text-decoration: none;
   color: #fff;
   font-size: large;
 }
 
-.transaction-nav ul form {
+.detail-nav ul form {
   margin-top: 0;
   width: fit-content;
 }
@@ -27,38 +27,27 @@
   width: 30px;
 }
 
-.trans-main {
+.details_main {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
 
-.sect-one-transaction {
+.sect-one-detail {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 1rem;
-  padding: 1rem;
   justify-content: center;
-  align-items: center;
-}
-
-.sect-one-trans-cont {
-  display: flex;
-  justify-content: space-between;
+  gap: 2rem;
   width: 100%;
-  border: 1px solid #3573ba;
-  border-radius: 0.2rem;
-  padding: 0.3rem;
 }
 
-.sect-one-trans-cont-item-one {
+.sect-one-detail-cont {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.sect-one-trans-cont-item-one img {
+.sect-one-detail-cont-item img {
   width: 50px;
 }

@@ -1,9 +1,5 @@
-form {
-  width: fit-content;
-}
-
 .nav_category {
-  background: #0084ff;
+  background: #3573ba;
   width: 100%;
 }
 
@@ -13,6 +9,15 @@ form {
   width: 100%;
   padding: 16px;
   align-items: center;
+}
+
+.sect-two-category-show a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
 }
 
 .nav_category ul a {
@@ -25,7 +30,11 @@ form {
   margin-top: 0;
 }
 
-.image img {
+.sect-one-container-items img {
+  width: 50px;
+}
+
+.nav_category ul a img {
   width: 30px;
 }
 
@@ -35,16 +44,16 @@ form {
   padding: 0.3rem;
   font-size: large;
   color: #fff;
-  background: #0084ff;
+  background: #3573ba;
   transition: all 0.3s ease;
 }
 
 .sign_out_btn:hover {
   background-color: #fff;
-  color: #0084ff;
+  color: #3573ba;
 }
 
-main {
+.category_main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -61,7 +70,7 @@ main {
 
 .sect-one-conatainer {
   display: flex;
-  border: 1px solid #0084ff;
+  border: 1px solid #3573ba;
   border-radius: 0.2rem;
   justify-content: space-between;
   width: 100%;
@@ -90,30 +99,24 @@ main {
   padding: 1rem;
 }
 
-.home_section3 {
+footer {
+  position: fixed;
+}
+
+.sect-two-category-show {
+  width: 100%;
+  background-color: #5eb323;
+  position: fixed;
+  bottom: 0;
   display: flex;
   justify-content: center;
 }
 
-.home_section3 button {
-  border: none;
-  border-radius: 0.3rem;
-  background: #0084ff;
-  padding: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.home_section3 button:hover {
+.sect-two-category-show:hover {
   background: #fff;
-  border: 1px solid #0084ff;
+  border: 1px solid #5eb323;
 }
 
-.home_section3 button a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.home_section3 button a:hover {
-  color: #0084ff;
+.sect-two-category-show a:hover {
+  color: #5eb323;
 }

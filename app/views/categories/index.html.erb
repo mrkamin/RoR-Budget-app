@@ -9,7 +9,7 @@
             </nav>
    
 
-     <main>
+     <main class="category_main">
 
         <section class="sect-one-category">
       <% @categories.each do |category| %> 
@@ -34,8 +34,8 @@
 
         </section>
 
-        <section class="home_section3">
-            <button> <%= link_to "New category", new_category_path, class:"td_none home_font4" %>  </button>
+        <section class="sect-two-category-show">
+            <%= link_to "New category", new_category_path %>  
         </section>
 
     </main>

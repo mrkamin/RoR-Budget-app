@@ -32,7 +32,7 @@
 }
 
 .sect-one-container-links a {
-  background: #0084ff;
+  background: #3573ba;
   padding: 0.3rem;
   text-decoration: none;
   color: #fff;
@@ -44,7 +44,7 @@
 }
 
 .sect-one-container-links a:hover {
-  color: #0084ff;
+  color: #3573ba;
   background: #fff;
-  border: 1px solid #0084ff;
+  border: 1px solid #3573ba;
 }

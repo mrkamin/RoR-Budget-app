@@ -1,37 +1,29 @@
 <%= stylesheet_link_tag "transaction" %>
-<body class="body">
-    
-        <nav class="transaction-nav">
+<body>
+    <nav class="transaction-nav">
         <ul>
-        <a class="image" href="./index.html"> <%=image_tag 'hamburger.png'%></a>
+            <a class="image" href="./index.html"> <%=image_tag 'hamburger.png'%></a>
             <a class="td_none home_font1" href="">TRANSACTIONS</a> 
             <%= button_to ('Log Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %>
         </ul>
-            </nav>
+        <ul>
+        <li><a href="" >Recent</a></li>
+        <li><a href="" >Recent</a></li>
+        <li><a href="" >Ancient</a></li>
+    </ul>
+    </nav>
     
-
-            <main class="home_main">
-
-            <section class="home_section1">
-                <ul class="list_box list_style_none">
-                    <li class="home_opacity1"><a href="" class="td_none">Recent</a></li>
-                    <li><a href="" class="td_none home_font1">Recent</a></li>
-                    <li><a href="" class="td_none home_font1">Ancient</a></li>
-                </ul>
-            </section>
-    
-            <section class="home_section2">
-            <% @payments.each do |payment| %>
-         
-       
-                <article class="home_section2_article">
-                    <div class="home_section2_article_box1">
+ <main class="trans-main">
+          <section class="sect-one-transaction">
+            <% @payments.each do |payment| %>      
+                <div class="sect-one-trans-cont">
+                    <div class="sect-one-trans-cont-item-one">
                         <figure>
                             <% payment.categories.each do |key| %> 
-                        <%=image_tag key.icon%>
-                        <%end%>
+                                <%=image_tag key.icon%>
+                            <%end%>
                         </figure>
-                        <div class="home_section2_article_box1_details">
+                         <div class="home_section2_article_box1_details">
                             <p class="home_font2"><%= link_to payment.name, payment, class:"td_none home_font2" %></p>
                             <p class="home_font2"><%=payment.created_at.strftime('%d %B %Y')%></p>
                         </div>
@@ -39,14 +31,13 @@
                     <div>
                         <p class="home_font3">$<%= payment.amount %></p>
                     </div>
-                </article> 
+                </div> 
             <% end %>
-            </section>
+        </section>
     
-            <section class="home_section3">
-                <button>
-                 <%= link_to "New Transaction", new_category_payment_path(@category), class:"td_none home_font4", data:{turbo: false} %> </button>
-            </section>
+            <section class="sect-two-category-show">
+            <%= link_to "New Transaction", new_category_path %>  
+        </section>
     
         </main>
 
