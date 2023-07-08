@@ -57,7 +57,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://budgeat.onrender.com)
 
 ## Project Presentation <a name="project-presentation"></a>
 
