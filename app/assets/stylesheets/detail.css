@@ -1,3 +1,7 @@
+body {
+  background: whitesmoke;
+}
+
 .detail-nav {
   background: #3573ba;
   width: 100%;
@@ -32,6 +36,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  margin: 1rem;
 }
 
 .sect-one-detail {
@@ -40,6 +45,10 @@
   justify-content: center;
   gap: 2rem;
   width: 100%;
+  background-color: #fff;
+  border: 1px;
+  border-radius: 0.3rem;
+  padding: 1rem;
 }
 
 .sect-one-detail-cont {
@@ -48,6 +57,18 @@
   gap: 2rem;
 }
 
+.sect-one-detail-cont-item {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+}
+
 .sect-one-detail-cont-item img {
   width: 50px;
+}
+
+.sect-one-detail-amount {
+  display: flex;
+  justify-content: space-between;
 }

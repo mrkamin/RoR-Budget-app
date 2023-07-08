@@ -3,7 +3,7 @@
     
         <nav class="detail-nav"> 
         <ul>
-                <a class="image" href="">
+                <a class="image" href="../categories/1/payments">
                 <%=image_tag 'back.svg'%></a>
                 <a class="td_none details_font1" href="">DETAILS</a> 
                 <%= button_to ('Log Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %>
@@ -14,44 +14,41 @@
     <main class="details_main"> 
 
        <section class="sect-one-detail">
-        <article class="sect-one-detail-cont">
-            <div class="sect-one-detail-cont-item">
-                <% @payment.categories.each do |key| %> 
-                <figure>
-                    <%=image_tag key.icon%>
-                </figure> 
-                <%end%>
-            </div>
-            <div class="sect-one-detail-name">
-                    <p ><%= @payment.name %></p> 
-                </div>
-            </div> 
+                    <div class="sect-one-detail-cont">
+                            <div class="sect-one-detail-cont-item">
+                                    <% @payment.categories.each do |key| %> 
+                                    <figure>
+                                        <%=image_tag key.icon%>
+                                 </figure> 
+                                    <%end%>
+                                    <p ><%= @payment.name %></p> 
+                            </div>
+                                        
 
-            <div class="sect-one-detail-desc">
-                <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate laborum molestias quo omnis laudantium hic quod quaerat labore? Cum doloribus minus illum ad! Nisi quod fuga omnis consequuntur deleniti.</p> 
-            </div> 
-
-            <div class="sect-one-detail-date">
-                <p >Transaction N000<%= @payment.id %>.</p>
-                <p >
-                <%=@payment.created_at.strftime('%d %B %Y')%>
-                </p>
-            </div>
-
-            <div class="sect-one-detail-amount"> 
-                <p >TOTAL PAYMENT </p>              
+                                <div class="sect-one-detail-desc">
+                                 <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate laborum molestias quo omnis laudantium hic quod quaerat labore? Cum doloribus minus illum ad! Nisi quod fuga omnis consequuntur deleniti.</p> 
+                             </div> 
+                             <hr>
+                            <div class="sect-one-detail-date">
+                                 <p >Transaction N000<%= @payment.id %>.</p>
+                                    <p >
+                                    <%=@payment.created_at.strftime('%d %B %Y')%>
+                                 </p>
+                            </div>
+                            <hr>
+                          <div class="sect-one-detail-amount"> 
+                                <p >TOTAL PAYMENT </p>              
                     
-                <p > $<%= @payment.amount %></p>  
-            </div>
+                                 <p > $<%= @payment.amount %></p>  
+                          </div>
 
-        </article> 
+        </div> 
        </section>
         
     </main> 
-
-        <p class="register_font4">
-        <%= link_to 'Back to users', users_path(@category), class:'td_none login_font3a' %></p>
-
+    <section class="sect-two-category-show">
+        <%= link_to 'Back to users', users_path(@category), class:'td_none login_font3a' %>
+        </section>
 </body>
 
 

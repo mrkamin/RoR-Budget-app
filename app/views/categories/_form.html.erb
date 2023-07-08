@@ -3,14 +3,14 @@
      
         <nav class="new-add-category-nav"> 
         <ul>
-                <a class="image" href="./index.html"><img src="./img/back.svg" alt=""></a> 
-                <a class="td_none register_font1" href="./register.html">CATEGORY</a>
-                <a class="td_none register_font2" href="./land.html">Next</a> 
+        <a class="image" href="../categories"><%=image_tag 'back.svg'%></a> 
+                <a class="td_none register_font1" href="../categories">CATEGORY</a>
+                <a class="td_none register_font2" href="">Next</a> 
                 </ul>
         </nav>
    
         <main class="add-category-main">
-        <section class="sect-one">
+        <section class="sect-one-add-category">
   <%= form_with(model: category, multipart: true, data:{turbo: false}) do |form| %>
     <% if category.errors.any? %>
       <div style="color: red">

@@ -3,6 +3,16 @@
   width: 100%;
 }
 
+.sect-one-add-category form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #3573ba;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  gap: 1rem;
+}
+
 .new-add-category-nav ul {
   display: flex;
   justify-content: space-between;
@@ -24,4 +34,31 @@
 
 .image img {
   width: 30px;
+}
+
+.add-category-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sect-one-add-category {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.sect-one-trans-cont-item-one {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sect-one-trans-cont-item-one img {
+  width: 50px;
 }

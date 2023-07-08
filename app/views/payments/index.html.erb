@@ -2,8 +2,8 @@
 <body>
     <nav class="transaction-nav">
         <ul>
-            <a class="image" href="./index.html"> <%=image_tag 'hamburger.png'%></a>
-            <a class="td_none home_font1" href="">TRANSACTIONS</a> 
+            <a class="image" href=""> <%=image_tag 'hamburger.png'%></a>
+            <a href="">TRANSACTIONS</a> 
             <%= button_to ('Log Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %>
         </ul>
         <ul>
