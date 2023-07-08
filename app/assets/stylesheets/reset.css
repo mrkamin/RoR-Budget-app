@@ -1,0 +1,24 @@
+.reset_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+}
+
+.reset_main h2 {
+    color: #3573ba;
+}
+
+.reset_main form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reset_main form input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+}

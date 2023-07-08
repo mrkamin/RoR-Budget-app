@@ -1,0 +1,53 @@
+<% stylesheet_link_tag "form-category-list" %>
+<body >
+  
+        <nav class="payment_nav"> 
+        <ul>
+               <a class="image" href="">
+                <%=image_tag 'back.svg'%></a> 
+                <a href="">NEW PAYMENTS</a> 
+                <a href="">Next</a> 
+                </ul>
+        </nav>
+        <main class="payment-main">
+
+        <section class="sect-one-payment">
+  
+  <%= form_with(model: [@category, @payment], data:{turbo: false}) do |form| %>
+    <% if payment.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+        <ul>
+          <% payment.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="register_fieldset"> 
+      <%= form.text_field :name, placeholder:"Name"  %>
+    </div>
+
+    <div class="register_fieldset"> 
+      <%= form.number_field :amount, placeholder:"Amount" %>
+    </div>
+
+     <div class="category-list"> 
+      <% current_user.categories.each do |categor| %>
+        <li class="list_flex">
+        <%= check_box_tag "categories[]", categor.id %>
+        <%= form.label categor.name %>
+        </li>
+      <% end %>
+    </div>  
+
+    <div class="actions register_fieldset">
+      <%= form.submit class:"login_input login_footer_fieldset" %>
+    </div>
+    
+  <% end %> 
+  </section>
+  </main>
+</body> 

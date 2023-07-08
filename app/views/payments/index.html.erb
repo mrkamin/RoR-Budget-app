@@ -1,0 +1,47 @@
+<%= stylesheet_link_tag "transaction" %>
+<body>
+    <nav class="transaction-nav">
+        <ul>
+            <a class="image" href=""> <%=image_tag 'hamburger.png'%></a>
+            <a href="">TRANSACTIONS</a> 
+            <%= button_to ('Log Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn register_font2 td_none" %>
+        </ul>
+        <ul>
+        <li><a href="" >Recent</a></li>
+        <li><a href="" >Recent</a></li>
+        <li><a href="" >Ancient</a></li>
+    </ul>
+    </nav>
+    
+ <main class="trans-main">
+          <section class="sect-one-transaction">
+            <% @payments.each do |payment| %>      
+                <div class="sect-one-trans-cont">
+                    <div class="sect-one-trans-cont-item-one">
+                        <figure>
+                            <% payment.categories.each do |key| %> 
+                                <%=image_tag key.icon%>
+                            <%end%>
+                        </figure>
+                         <div class="home_section2_article_box1_details">
+                            <p class="home_font2"><%= link_to payment.name, payment, class:"td_none home_font2" %></p>
+                            <p class="home_font2"><%=payment.created_at.strftime('%d %B %Y')%></p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="home_font3">$<%= payment.amount %></p>
+                    </div>
+                </div> 
+            <% end %>
+        </section>
+    
+            <section class="sect-two-category-show">
+            <%= link_to "New Transaction", new_category_path %>  
+        </section>
+    
+        </main>
+
+</body>
+
+
+   

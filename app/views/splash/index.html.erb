@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "splash" %>
+<body> 
+    <main class="main_splash">
+        <section class="sect-one-splash">
+            <div class="sect-one-container-splash">
+                 <%=image_tag 'logo.webp'%>   
+            <div class="sect-one-container-links">
+             <%= link_to 'LOG IN', new_user_session_path, class:'login' %> 
+             <%= link_to 'SIGN UP', new_user_registration_path, class:'signup' %>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>

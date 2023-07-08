@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag "category" %>
+<body>
+    <nav class="nav_category" >
+    <ul>
+            <a class="image" href=""> <%=image_tag 'hamburger.png'%></a>
+            <a class="td_none home_font1" href="">CATEGORIES</a> 
+            <%= button_to ('Sign Out'), destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class:"sign_out_btn" %>
+    </ul>
+            </nav>
+   
+
+     <main class="category_main">
+
+        <section class="sect-one-category">
+      <% @categories.each do |category| %> 
+
+
+            <div class="sect-one-conatainer">
+                <div class="sect-one-container-items">
+                    
+                    <%=image_tag category.icon%> 
+                    
+                    <div class="sect-one-cont-items-item-two">
+                        <p><%= link_to category.name, category, class:"category-name", data:{turbo: false} %></p>
+                        <p><%=category.created_at.strftime('%d %B %Y')%></p>
+                    </div>
+                </div>
+                <div class="sect-one-container-item-three">
+                    <%= link_to category.total_category_amount, category, class:"total-amount", data:{turbo: false} %>
+                </div>
+            </div>
+
+      <% end %> 
+
+        </section>
+
+        <section class="sect-two-category-show">
+            <%= link_to "New category", new_category_path %>  
+        </section>
+
+    </main>
+
+</body>

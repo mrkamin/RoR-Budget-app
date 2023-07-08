@@ -1,0 +1,49 @@
+<%= stylesheet_link_tag "signup" %>
+<body>
+       <nav class="singup_nav"> 
+       <ul>
+                <a class="image" href="../splash"><%=image_tag 'back.svg'%></a>
+                <a class="td_none register_font1" href="../users/sign_up">REGISTER</a> 
+                <a class="td_none register_font2" href="./land.html">Next</a> 
+                </ul>
+        </nav>
+
+
+        <main class="signup_main">
+        <section class="sect-one-signup">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data:{turbo: false}) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field register_fieldset"> 
+        <%= f.text_field :name, autofocus: true,placeholder:"Full name", class:'login_email' %>
+    </div> 
+
+    <div class="field register_fieldset"> 
+      <%= f.email_field :email, autofocus: true, placeholder:"Email", autocomplete: "email" %>
+    </div>
+
+    <div class="field register_fieldset">  
+      <%= f.password_field :password, autocomplete: "new-password", placeholder:"Password (6 characters minimum)" %>
+    </div>
+
+    <div class="field register_fieldset"> 
+      <%= f.password_field :password_confirmation, placeholder:"Password Confirmation (Enter same as above)", autocomplete: "new-password" %>
+    </div>
+
+    <div class="actions register_fieldset">
+      <%= f.submit "Sign up", class:"login_input login_footer_fieldset" %>
+    </div>
+
+  <% end %> 
+
+  <p class="register_font4">
+  <%= link_to 'Log in', new_user_session_path, class:'td_none login_font3a' %></p>
+
+  <p class="register_font4">
+  <%= link_to 'Did not receive confirmation instructions?', new_user_confirmation_path, class:'td_none login_font3a' %></p>
+  </section>
+  </main>
+</body> 
+
+
+
